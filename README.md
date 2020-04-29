@@ -8,7 +8,7 @@ This is a example repo for using Frontity with Tailwindcss + babel-plugin-macros
 `npx tailwindcss init --full` Here you include your new classes or modify one.
 
 ## Babel
-Create the file: babel-plugin-macros.config.js with the followind content:
+Create the file: babel-plugin-macros.config.js with the following content:
 
 ```
 module.exports = {
