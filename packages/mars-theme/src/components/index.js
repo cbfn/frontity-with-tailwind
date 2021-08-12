@@ -7,6 +7,7 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import tw from 'tailwind.macro';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -64,18 +65,9 @@ const globalStyles = css`
 `;
 
 const HeadContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #1f38c5;
+  ${tw`flex flex-col items-center bg-gray-900`};
 `;
 
 const Main = styled.div`
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
+  ${tw`flex justify-center bg-blue-100`};
 `;

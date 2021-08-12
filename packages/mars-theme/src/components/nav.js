@@ -3,10 +3,6 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import tw from "tailwind.macro";
 
-const Button = styled("button")`
-  ${tw`font-mono text-lg bg-blue-300`};
-`;
-
 /**
  * Navigation Component
  *
@@ -14,7 +10,6 @@ const Button = styled("button")`
  */
 const Nav = ({ state }) => (
   <NavContainer>
-    <Button>Teste</Button>
     {state.theme.menu.map(([name, link]) => {
       // Check if the link matched the current page url
       const isCurrentPage = state.router.link === link;
