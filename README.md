@@ -1,32 +1,34 @@
 # Using Tailwindcss with Frontity
-This is a example repo for using Frontity with Tailwindcss + babel-plugin-macros 
+This is a example repo for using Frontity with Tailwindcss + babel-plugin-macros + babel-plugin-twin + twin.macro
 
 ## Setup
-`npm install --save tailwindcss babel-plugin-macros tailwind.macro@next`
+`yarn add -D tailwindcss babel-plugin-macros babel-plugin-twin twin.macro`
 
-## Config
+## Config (Optional)
 `npx tailwindcss init --full` Here you include your new classes or modify one.
 
 ## Babel
-Create the file: babel-plugin-macros.config.js with the following content:
+Create the file: .babelrc with the following content:
 
 ```
-module.exports = {
-  tailwind: {
-    config: "./tailwind.config.js",
-    format: "auto",
-  },
-};
+{
+  "plugins": ["babel-plugin-twin", "babel-plugin-macros"]
+}
 ```
 
-## Use in your component
+## Use in your component. Ex: src -> mars theme -> components -> index.js
 ```
-import React from "react";
-import { connect, styled } from "frontity";
-import Link from "./link";
-import tw from "tailwind.macro";
+import { Global, css, connect, styled, Head } from "frontity";
+import Switch from "@frontity/components/switch";
+import Header from "./header";
+import List from "./list";
+import Post from "./post";
+import Loading from "./loading";
+import Title from "./title";
+import PageError from "./page-error";
+import tw from "twin.macro";
 
-const Button = styled("button")`
-  ${tw`font-mono text-lg bg-blue-300`};
+const HeadContainer = styled.div`
+  ${tw`flex flex-col items-center bg-gray-900 h-[200px]`};
 `;
 ```
