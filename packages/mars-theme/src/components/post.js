@@ -1,9 +1,28 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
 
+/**
+ * The Post component that Mars uses to render any kind of "post type", like
+ * posts, pages, attachments, etc.
+ *
+ * It doesn't receive any prop but the Frontity store, which it receives from
+ * {@link connect}. The current Frontity state is used to know which post type
+ * should be rendered.
+ *
+ * @param props - The Frontity store (state, actions, and libraries).
+ *
+ * @example
+ * ```js
+ * <Switch>
+ *   <Post when={data.isPostType} />
+ * </Switch>
+ * ```
+ *
+ * @returns The {@link Post} element rendered.
+ */
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -25,7 +44,7 @@ const Post = ({ state, actions, libraries }) => {
   useEffect(() => {
     actions.source.fetch("/");
     List.preload();
-  }, []);
+  }, [actions.source]);
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
@@ -33,8 +52,8 @@ const Post = ({ state, actions, libraries }) => {
       <div>
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
-        {/* Only display author and date on posts */}
-        {data.isPost && (
+        {/* Hide author and date on pages */}
+        {!data.isPage && (
           <div>
             {author && (
               <StyledLink link={author.link}>
@@ -43,10 +62,10 @@ const Post = ({ state, actions, libraries }) => {
                 </Author>
               </StyledLink>
             )}
-            <Fecha>
+            <DateWrapper>
               {" "}
               on <b>{date.toDateString()}</b>
-            </Fecha>
+            </DateWrapper>
           </div>
         )}
       </div>
@@ -56,11 +75,18 @@ const Post = ({ state, actions, libraries }) => {
         <FeaturedMedia id={post.featured_media} />
       )}
 
-      {/* Render the content using the Html2React component so the HTML is processed
-       by the processors we included in the libraries.html2react.processors array. */}
-      <Content>
-        <Html2React html={post.content.rendered} />
-      </Content>
+      {data.isAttachment ? (
+        // If the post is an attachment, just render the description property,
+        // which already contains the thumbnail.
+        <div dangerouslySetInnerHTML={{ __html: post.description.rendered }} />
+      ) : (
+        // Render the content using the Html2React component so the HTML is
+        // processed by the processors we included in the
+        // libraries.html2react.processors array.
+        <Content>
+          <Html2React html={post.content.rendered} />
+        </Content>
+      )}
     </Container>
   ) : null;
 };
@@ -90,7 +116,7 @@ const Author = styled.p`
   display: inline;
 `;
 
-const Fecha = styled.p`
+const DateWrapper = styled.p`
   color: rgba(12, 17, 43, 0.9);
   font-size: 0.9em;
   display: inline;
@@ -120,8 +146,7 @@ const Content = styled.div`
 
   figure {
     margin: 24px auto;
-    /* next line overrides an inline style of the figure element. */
-    width: 100% !important;
+    width: 100%;
 
     figcaption {
       font-size: 0.7em;

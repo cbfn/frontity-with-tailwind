@@ -1,14 +1,20 @@
-import React from "react";
-import { styled, connect } from "frontity";
+import { styled, connect, useConnect } from "frontity";
 import Link from "./link";
 
-const MenuModal = ({ state }) => {
+/**
+ * The modal containing the mobile menu items.
+ *
+ * @param props - The props passed to the component from parent.
+ * @returns A React component.
+ */
+const MenuModal = ({ ...props }) => {
+  const { state } = useConnect();
   const { menu } = state.theme;
-  const isThereLinks = menu != null && menu.length > 0;
+  const isThereLinks = menu?.length > 0;
 
   return (
-    <>
-      <MenuOverlay />
+    <div {...props}>
+      {state.frontity.mode !== "amp" && <MenuOverlay />}
       <MenuContent as="nav">
         {isThereLinks &&
           menu.map(([name, link]) => (
@@ -21,7 +27,7 @@ const MenuModal = ({ state }) => {
             </MenuLink>
           ))}
       </MenuContent>
-    </>
+    </div>
   );
 };
 
@@ -38,6 +44,7 @@ const MenuOverlay = styled.div`
 
 const MenuContent = styled.div`
   z-index: 3;
+  position: relative;
 `;
 
 const MenuLink = styled(Link)`
@@ -56,8 +63,7 @@ const MenuLink = styled(Link)`
   &[aria-current="page"] {
     color: yellow;
     font-weight: bold;
-    /* border-bottom: 4px solid yellow; */
   }
 `;
 
-export default connect(MenuModal);
+export default connect(MenuModal, { injectProps: false });
