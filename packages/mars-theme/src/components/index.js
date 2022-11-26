@@ -1,4 +1,3 @@
-import React from "react";
 import { Global, css, connect, styled, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
@@ -7,11 +6,15 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
-import tw from 'tailwind.macro';
+import tw from "twin.macro";
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
+ *
+ * @param props - The props injected by Frontity's {@link connect} HOC.
+ *
+ * @returns The top-level react component representing the theme.
  */
 const Theme = ({ state }) => {
   // Get information about the current URL.
@@ -65,7 +68,7 @@ const globalStyles = css`
 `;
 
 const HeadContainer = styled.div`
-  ${tw`flex flex-col items-center bg-gray-900`};
+  ${tw`flex flex-col items-center bg-gray-900 h-[200px]`};
 `;
 
 const Main = styled.div`

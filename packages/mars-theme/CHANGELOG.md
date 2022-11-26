@@ -1,5 +1,118 @@
 # Change Log
 
+## 1.6.2
+
+### Patch Changes
+
+- [`ae9b39db`](https://github.com/frontity/frontity/commit/ae9b39db6ff23efc26ed242598e72eb95b4c326f) [#882](https://github.com/frontity/frontity/pull/882) Thanks [@nicholasio](https://github.com/nicholasio)! - Fix to maintain the active nav item for pages
+
+- Updated dependencies [[`379a4476`](https://github.com/frontity/frontity/commit/379a44761423b4e47466359bbfe598615a869dcb)]:
+  - @frontity/components@1.8.2
+
+## 1.6.1
+
+### Patch Changes
+
+- [`f87b062d`](https://github.com/frontity/frontity/commit/f87b062d8c65088b3c245c3c2ae4ca82cecd00a8) [#836](https://github.com/frontity/frontity/pull/836) Thanks [@luisherranz](https://github.com/luisherranz)! - Fix some duplicate fields in the README.
+
+- Updated dependencies [[`f87b062d`](https://github.com/frontity/frontity/commit/f87b062d8c65088b3c245c3c2ae4ca82cecd00a8), [`f87b062d`](https://github.com/frontity/frontity/commit/f87b062d8c65088b3c245c3c2ae4ca82cecd00a8)]:
+  - frontity@1.17.0
+  - @frontity/components@1.8.1
+
+## 1.6.0
+
+### Minor Changes
+
+- [`facd9b2e`](https://github.com/frontity/frontity/commit/facd9b2e682effaa9d023378f7798afcaa18b615) [#825](https://github.com/frontity/frontity/pull/825) Thanks [@michalczaplinski](https://github.com/michalczaplinski)! - Make the mars-theme "AMP-aware" and clean up the theme to pass the AMP html-validator checks.
+
+### Patch Changes
+
+- Updated dependencies [[`ba161a58`](https://github.com/frontity/frontity/commit/ba161a58ca6759c1209f926af28f8b3aba141476)]:
+  - frontity@1.16.1
+
+## 1.5.2
+
+### Patch Changes
+
+- [`33b28ac9`](https://github.com/frontity/frontity/commit/33b28ac93f7120f41aa6d4cc3377114536b79faf) [#799](https://github.com/frontity/frontity/pull/799) Thanks [@DAreRodz](https://github.com/DAreRodz)! - Fix the `Post` component to render attachment pages properly.
+
+* [`bbcfff7c`](https://github.com/frontity/frontity/commit/bbcfff7c86999762f9b988190d161aa6c3c14343) [#797](https://github.com/frontity/frontity/pull/797) Thanks [@mburridge](https://github.com/mburridge)! - Updates image links in theme README.md files
+
+## 1.5.1
+
+### Patch Changes
+
+- [`888060c1`](https://github.com/frontity/frontity/commit/888060c11a0f458abe3a6e4b794733d3a49eb716) [#789](https://github.com/frontity/frontity/pull/789) Thanks [@mburridge](https://github.com/mburridge)! - Fixes broken links in README.md
+
+- Updated dependencies [[`62e60216`](https://github.com/frontity/frontity/commit/62e60216198111626d82566507f7f208323ffeee), [`944d5888`](https://github.com/frontity/frontity/commit/944d5888b8884585a39485002b896b4f9beaaab3), [`77e0a286`](https://github.com/frontity/frontity/commit/77e0a286ceb8274efb6a473c01c8f60d78b70225), [`f227d135`](https://github.com/frontity/frontity/commit/f227d1351234c0d458e0280a6a2f13a959ed576f)]:
+  - frontity@1.15.0
+  - @frontity/components@1.7.2
+
+## 1.5.0
+
+### Minor Changes
+
+- [`3ced7fdf`](https://github.com/frontity/frontity/commit/3ced7fdfd93004c210bb47692ffae265874828e7) [#670](https://github.com/frontity/frontity/pull/670) Thanks [@nicholasio](https://github.com/nicholasio)! - Update react imports in all packages (including themes) to removed unnecessary React Imports
+
+* [`120f4c3e`](https://github.com/frontity/frontity/commit/120f4c3e5ac138bc0b63c44144d7e8c26af584cb) [#642](https://github.com/frontity/frontity/pull/642) Thanks [@luisherranz](https://github.com/luisherranz)! - Start using the `Link` component of `@frontity/components`.
+
+### Patch Changes
+
+- [`5f329dab`](https://github.com/frontity/frontity/commit/5f329dabe9d67d0b3664938865491674ef798433) [#655](https://github.com/frontity/frontity/pull/655) Thanks [@mburridge](https://github.com/mburridge)! - Fix broken links in README files.
+
+- Updated dependencies [[`a5520f56`](https://github.com/frontity/frontity/commit/a5520f5605cfda2323e0c9ea4a553658a021fd15), [`01880c34`](https://github.com/frontity/frontity/commit/01880c34c111f55c23169adb7365ea9262e6cca8), [`3ced7fdf`](https://github.com/frontity/frontity/commit/3ced7fdfd93004c210bb47692ffae265874828e7), [`b288143b`](https://github.com/frontity/frontity/commit/b288143be0ad332c0bbd006e1da344c142635aee), [`5f329dab`](https://github.com/frontity/frontity/commit/5f329dabe9d67d0b3664938865491674ef798433), [`09f07484`](https://github.com/frontity/frontity/commit/09f07484c920e99d46290986d7a64b8f3c20e53c), [`e4221d4b`](https://github.com/frontity/frontity/commit/e4221d4b451268b5c951197a08b4021d50394c1b), [`9346f560`](https://github.com/frontity/frontity/commit/9346f560c4806483b914aa3fb7a37e373f48f712), [`5f329dab`](https://github.com/frontity/frontity/commit/5f329dabe9d67d0b3664938865491674ef798433), [`c5b0b8f7`](https://github.com/frontity/frontity/commit/c5b0b8f7e5ebfdf02f40ded7d7347a1d28039c2d), [`e94c0daa`](https://github.com/frontity/frontity/commit/e94c0daa5fa561384f4593939f25141e7bb0ada2)]:
+  - frontity@1.14.0
+  - @frontity/components@1.7.0
+  - @frontity/html2react@1.6.0
+
+## 1.4.4
+
+### Patch Changes
+
+- [`44f44e3f`](https://github.com/frontity/frontity/commit/44f44e3f2ba436236b65518ddac30cd4af57ea18) [#590](https://github.com/frontity/frontity/pull/590) Thanks [@luisherranz](https://github.com/luisherranz)! - Update TypeScript definitions.
+
+- Updated dependencies [[`362b02f1`](https://github.com/frontity/frontity/commit/362b02f1beb100ffb178a1d4e775e89b84b99ccc), [`54c588a9`](https://github.com/frontity/frontity/commit/54c588a9534d7c1761c0def8c83381696fd443fc), [`6b4bf82b`](https://github.com/frontity/frontity/commit/6b4bf82b5eee698f7ea8ea3b0bfd69a989caaba3), [`44f44e3f`](https://github.com/frontity/frontity/commit/44f44e3f2ba436236b65518ddac30cd4af57ea18)]:
+  - frontity@1.13.0
+  - @frontity/components@1.6.0
+  - @frontity/html2react@1.5.0
+
+## 1.4.3
+
+### Patch Changes
+
+- [`8b756d13`](https://github.com/frontity/frontity/commit/8b756d13a696ad41796f5e687fc77d2556618f66) [#490](https://github.com/frontity/frontity/pull/490) Thanks [@juanmaguitar](https://github.com/juanmaguitar)! - README created.
+
+- Updated dependencies [[`cfa8062d`](https://github.com/frontity/frontity/commit/cfa8062d60ccf46b3e0c5aa5490e4e03f1b693a5), [`ba13f70a`](https://github.com/frontity/frontity/commit/ba13f70ae2a4360ca21c77aed1c920c02e9d45b8), [`19912053`](https://github.com/frontity/frontity/commit/1991205379a103bc4ec09397cca99c1f2ba09a2d), [`845de536`](https://github.com/frontity/frontity/commit/845de536d111105dd3f636c3543170a676ac65cc), [`62fce1e5`](https://github.com/frontity/frontity/commit/62fce1e5c117faeb5902dc0ddae3b13d95cd925b)]:
+  - @frontity/components@1.3.3
+  - frontity@1.9.0
+  - @frontity/html2react@1.3.4
+
+## 1.4.3-infinite-scroll-beta.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - frontity@1.8.1-infinite-scroll-beta.0
+  - @frontity/components@1.3.3-infinite-scroll-beta.0
+  - @frontity/html2react@1.3.4-infinite-scroll-beta.0
+
+## 1.4.2
+
+### Patch Changes
+
+- [`de6c7fe6`](https://github.com/frontity/frontity/commit/de6c7fe6e43510dddf26e8afbe1ef05ac5ab379c) [#454](https://github.com/frontity/frontity/pull/454) Thanks [@c4rl0sbr4v0](https://github.com/c4rl0sbr4v0)! - Rename the `Fecha` component name from Spanish to English: `DateWrapper`.
+
+- Updated dependencies [[`6900916a`](https://github.com/frontity/frontity/commit/6900916ace309d3cc55b9c732124df5d3db96838)]:
+  - frontity@1.8.0
+
+## 1.4.1
+
+### Patch Changes
+
+- [`77327403`](https://github.com/frontity/frontity/commit/77327403a8fbd44ba6780c3f1be016fda219298b) [#409](https://github.com/frontity/frontity/pull/409) Thanks [@w3bdesign](https://github.com/w3bdesign)! - Use a CSS-only loader to get rid of the outdated `react-spinners` package.
+- Updated dependencies [[`bf3db894`](https://github.com/frontity/frontity/commit/bf3db8949c7ae85c699a9c5a4613185e4ba0baaa)]:
+  - frontity@1.6.0
+
 ## 1.4.0
 
 ### Minor Changes
